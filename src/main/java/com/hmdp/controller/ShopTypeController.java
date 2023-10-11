@@ -10,12 +10,13 @@ import com.hmdp.service.IShopTypeService;
 @RestController
 @RequestMapping("/shop-type")
 public class ShopTypeController {
-    @Resource
-    private IShopTypeService shopTypeService;
 
-    @GetMapping("/list")
-    public Result queryTypeList() {
-        Result shopTypeList = shopTypeService.queryShopTypeList();
-        return Result.ok(shopTypeList);
-    }
+  @Resource
+  private IShopTypeService shopTypeService;
+
+  @GetMapping("/list")
+  public Result queryTypeList() {
+    Result shopTypeList = shopTypeService.queryShopTypeList();
+    return Result.ok(shopTypeList);
+  }
 }
